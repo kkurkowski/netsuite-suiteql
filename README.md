@@ -122,8 +122,12 @@ pip install -r requirements.txt
 ### Create an Access Token
 
 1. Go to **Setup → Users/Roles → Access Tokens → New**
-2. Select your Integration and User
-3. Save and copy the **Token ID** and **Token Secret**
+2. Select your **Integration** (the one created above)
+3. Select the **User** and **Role**
+4. Give it a name (e.g., `SuiteQL Python Token`)
+5. Save and copy the **Token ID** and **Token Secret**
+
+> **Note:** Older versions of NetSuite offered a self-service option where users could generate tokens directly from their own profile under **Home → Set Preferences → Access Tokens**. This option is no longer available in current versions — tokens must now be created by an administrator via the path above.
 
 ---
 
