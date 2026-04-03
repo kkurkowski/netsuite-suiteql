@@ -149,6 +149,35 @@ NS_TOKEN_SECRET=your_token_secret
 
 > ⚠️ **Never commit your `.env` file to source control.**
 
+### Optional: Multiple Environments
+
+If you work across multiple NetSuite environments (e.g. sandbox and production) or multiple accounts, create a separate `.env` file for each:
+
+```
+.env.production
+.env.sandbox
+```
+
+Each file follows the same format, with credentials for that environment:
+
+```env
+# .env.sandbox
+NS_ACCOUNT_ID=1234567_SB1
+NS_CONSUMER_KEY=your_consumer_key
+NS_CONSUMER_SECRET=your_consumer_secret
+NS_TOKEN_ID=your_token_id
+NS_TOKEN_SECRET=your_token_secret
+```
+
+Then load the appropriate file at the top of your notebook:
+
+```python
+from dotenv import load_dotenv
+load_dotenv(".env.sandbox")  # switch to ".env.production" as needed
+```
+
+> All `.env*` files are covered by `.gitignore` — none will be committed to source control.
+
 ---
 
 ## Open the Jupyter Notebook
