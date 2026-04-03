@@ -1,0 +1,6 @@
+requests
+requests-oauthlib
+ipykernel
+jupyter
+python-dotenv
+pandas
